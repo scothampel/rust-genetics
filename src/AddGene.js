@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './css/AddGene.css';
 import GeneList from './GeneList';
 
-export default function AddGene() {
+export default function AddGene(props) {
 
-    const [geneList, setGeneList] = useState([]);
-    const [newGene, setNewGene] = useState('');
+    const onGeneListChange = props.onGeneListChange;
+    const geneList = props.geneList;
+    const onNewGeneChange = props.onNewGeneChange;
+    const newGene = props.newGene;
 
     const handleAddGene = (e) => {
         e.preventDefault();
@@ -13,10 +15,9 @@ export default function AddGene() {
         const value = target.value.toUpperCase();
         if (RegExp('^[GYHWX]{6}$').test(value)){
             if(!geneList.includes(value)){
-                setGeneList((prev) => {
-                    return [value, ...prev];
-                });
-                setNewGene('');
+                onGeneListChange(value, false);
+                //setNewGene('');
+                onNewGeneChange('');
             }
             else{
                 //TODO: use bootstrap alert
@@ -30,16 +31,16 @@ export default function AddGene() {
     }
 
     const handleRemoveGene = (gene) => {
-        setGeneList((prev) => {return prev.filter((value) => {return value !== gene})});
+        onGeneListChange(gene, true);
     }
 
     const handleChange = ({target}) => {
         const value = target.value.toUpperCase();
         if (RegExp('^$|^[GYHWX]{1,6}$').test(value)){
-            setNewGene(value);
+            onNewGeneChange(value);
         }
         else{
-            setNewGene((prev) => {return prev});
+            onNewGeneChange(newGene);
         }
     }
 

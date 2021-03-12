@@ -10,9 +10,7 @@ export default function GeneList(props) {
             return (
                 <li className='list-group-item' key={gene}>
                     {gene}
-                    <button className='btn btn-sm btn-danger float-end' onClick={() => {handleRemoveGene(gene)}}>
-                        <i className="bi bi-x"></i>
-                    </button>
+                    <button className='btn btn-sm btn-close float-end' onClick={() => {handleRemoveGene(gene)}}></button>
                 </li>
             )
         })
