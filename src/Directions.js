@@ -16,16 +16,18 @@ export default function Directions(props) {
                 gene3: value[2],
                 gene4: value[3],
                 gene5: value[4],
-                gene6: value[5],
-                str: value
+                gene6: value[5]
             };
             onGeneChange(geneObj);
         }
     }
 
     return (
-        <div className='Directions col-md-9 pt-3 container-fluid row m-0'>
-            <Instruction directions={directions} onCompletedStep={handleCompletedStep} />
+        <div className='Directions col-md-9 pt-3 container-fluid'>
+            <div className='row'>
+                <Instruction directions={directions} onCompletedStep={handleCompletedStep} />
+            </div>
+            
         </div>
     )
 }
