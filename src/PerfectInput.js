@@ -22,7 +22,7 @@ export default function PerfectInput(props) {
     }
 
     return (
-        <div className='PerfectInput'>
+        <div className='PerfectInput rounded'>
             <h3 className='text-center w-100'>Starting Near Perfect Gene</h3>
             <form className='row m-0'>
                 <div className='form-group col-md-2'>
