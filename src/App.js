@@ -41,7 +41,6 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(gene)
     handleDirectionsChange(geneticsDirections(gene, [...geneList].reverse()));
   }, [gene, geneList]);
 
