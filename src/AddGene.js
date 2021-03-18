@@ -45,7 +45,7 @@ export default function AddGene(props) {
     }
 
     return (
-        <div className='AddGene col-md-3 pt-3 pb-3 cointainer-fluid'>
+        <div className='AddGene col-md-3 pt-md-3 pb-3 cointainer-fluid'>
             <ul className='list-group'>
                 <form className='list-group-item' onSubmit={handleAddGene}>
                     <div className='input-group'>
