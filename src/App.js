@@ -52,6 +52,7 @@ function App() {
         <Directions directions={directions} onGeneChange={handleGeneChange} />
         <AddGene geneList={geneList} onGeneListChange={handleGeneListChange} newGene={newGene} onNewGeneChange={handleNewGeneChange} />
       </div>
+      <h6 className='footer'>2021 Scot Hampel &bull; scot@scothampel.com</h6>
     </div>
   );
 }
