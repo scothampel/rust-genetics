@@ -40,7 +40,7 @@ export const geneticsDirections = (gene, geneList) => {
             }
         }
         else if (geneString.length === 6) {
-            tempDirections.push(['Now, input the clones you currently have in the textbox to the right (One at a time).', '', -1]);
+            tempDirections.push(['Now, input the clones you currently have in the textbox (One at a time).', '', -1]);
         }
     }
     return tempDirections;

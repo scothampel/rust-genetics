@@ -15,6 +15,9 @@ export default function PerfectInput(props) {
             if(nextGene){
                 nextGene.children[0].focus();        
             }
+            else {
+                document.querySelector('#newGene').focus();
+            }
         }
         else{
             onGeneChange({[target.id]: ''});
