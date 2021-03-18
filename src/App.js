@@ -46,14 +46,18 @@ function App() {
   }, [gene, geneList]);
 
   return (
+    <>
     <div className='container'>
       <PerfectInput gene={gene} onGeneChange={handleGeneChange} />
       <div className='row m-0'>
         <Directions directions={directions} onGeneChange={handleGeneChange} />
         <AddGene geneList={geneList} onGeneListChange={handleGeneListChange} newGene={newGene} onNewGeneChange={handleNewGeneChange} />
       </div>
-      <h6 className='footer'>2021 Scot Hampel &bull; scot@scothampel.com</h6>
     </div>
+    <div className='footer'>
+      <h6 >2021 Scot Hampel &bull; scot@scothampel.com</h6>
+    </div>
+    </>
   );
 }
 
