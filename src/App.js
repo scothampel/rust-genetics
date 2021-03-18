@@ -55,7 +55,7 @@ function App() {
       </div>
     </div>
     <div className='footer'>
-      <h6 >2021 Scot Hampel &bull; scot@scothampel.com</h6>
+      <h6 >Scot Hampel &copy; 2021 &bull; scot@scothampel.com &bull; <a href='https://github.com/scothampel' target='_blank'>Github</a></h6>
     </div>
     </>
   );
