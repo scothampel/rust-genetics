@@ -15,12 +15,11 @@ export const geneticsDirections = (gene, geneList) => {
             else {
                 current = valids;
             }
-            
             let letterCount = (current[2].match(/[YG]/g) || []).length;
             // Remove instructions first
             tempDirections.pop();
             // Don't add step 1 if provided near perfect gene is already perfect
-            if (letterCount !== 6) {
+            if ((geneString.match(/[YG]/g) || []).length !== 6) {
                 tempDirections.push([`Crossbreed your near perfect clone ${geneString} with clones ${current[0]} and ${current[1]}`, current[2], letterCount]);
             }
             // Add each instruction based on best route
